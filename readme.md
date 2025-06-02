@@ -15,6 +15,9 @@ A demonstration project showcasing a professional trading chart implementation u
 - ✅ **Chart Settings**: Comprehensive chart customization options
 - ✅ **Responsive Design**: Works seamlessly on desktop and mobile devices
 
+## 🖼 Chart Preview
+![chart.png](src/assets/chart.png)
+
 ## 🛠 Quick Start
 
 ### Prerequisites
