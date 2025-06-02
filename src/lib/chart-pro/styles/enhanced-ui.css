@@ -1,0 +1,263 @@
+/* Drag & Drop Styles */
+.dragging {
+  opacity: 0.8;
+  transform: rotate(2deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: none;
+  cursor: grabbing !important;
+}
+
+.drag-handle {
+  cursor: move;
+  color: var(--chart-text-secondary-color, #999);
+  font-size: 12px;
+  padding: 4px;
+  user-select: none;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.drag-handle:hover {
+  opacity: 1;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--chart-panel-background-color, #f8f9fa);
+  border-bottom: 1px solid var(--chart-border-color, #e8e8e8);
+  cursor: move;
+}
+
+.panel-title {
+  font-weight: 600;
+  color: var(--chart-text-color, #051441);
+}
+
+/* Detailed Tooltips */
+.detailed-tooltip {
+  position: fixed;
+  background: var(--chart-background-color, #ffffff);
+  border: 1px solid var(--chart-border-color, #e8e8e8);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  max-width: 400px;
+  z-index: 10001;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--chart-text-color, #051441);
+}
+
+.tooltip-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--chart-primary-color, #1677ff);
+}
+
+.tooltip-description {
+  margin-bottom: 12px;
+  color: var(--chart-text-color, #051441);
+}
+
+.tooltip-parameters,
+.tooltip-usage,
+.tooltip-formula {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.tooltip-parameters strong,
+.tooltip-usage strong,
+.tooltip-formula strong {
+  color: var(--chart-text-color, #051441);
+}
+
+.tooltip-formula {
+  font-family: 'Courier New', monospace;
+  background: var(--chart-panel-background-color, #f8f9fa);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Context Menu Styles */
+.context-menu {
+  position: fixed;
+  background: var(--chart-panel-background-color, #ffffff);
+  border: 1px solid var(--chart-border-color, #e8e8e8);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 4px 0;
+  min-width: 180px;
+  z-index: 10000;
+  font-size: 14px;
+  user-select: none;
+  backdrop-filter: blur(8px);
+}
+
+.menu-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--chart-text-color, #051441);
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-item:hover {
+  background-color: rgba(22, 119, 255, 0.1);
+}
+
+.menu-item.danger {
+  color: #ff4d4f;
+}
+
+.menu-item.danger:hover {
+  background-color: rgba(255, 77, 79, 0.1);
+}
+
+.menu-separator {
+  height: 1px;
+  background-color: var(--chart-border-color, #e8e8e8);
+  margin: 4px 0;
+}
+
+/* Enhanced Drawing Tools Panel */
+.drawing-tools-panel {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: var(--chart-panel-background-color, #ffffff);
+  border: 1px solid var(--chart-border-color, #e8e8e8);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  user-select: none;
+  min-width: 200px;
+}
+
+.drawing-tools-panel.dragging {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard Shortcuts Help */
+.shortcuts-help {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--chart-background-color, #ffffff);
+  border: 1px solid var(--chart-border-color, #e8e8e8);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  max-width: 500px;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 10002;
+}
+
+.shortcuts-list {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto 1fr;
+}
+
+.shortcut-key {
+  background: var(--chart-panel-background-color, #f5f5f5);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.shortcut-description {
+  display: flex;
+  align-items: center;
+  color: var(--chart-text-color, #051441);
+}
+
+/* Enhanced Indicator Items */
+.indicator-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.indicator-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.15);
+}
+
+.indicator-item:hover .indicator-type {
+  color: var(--chart-primary-color, #1677ff);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drawing-tools-panel {
+    right: 10px;
+    min-width: 180px;
+  }
+
+  .detailed-tooltip {
+    max-width: 300px;
+    padding: 12px;
+  }
+
+  .context-menu {
+    min-width: 160px;
+  }
+}
+
+/* Dark Theme Overrides */
+:root[data-theme="dark"] {
+  --tooltip-background: #1e1e1e;
+  --tooltip-border: #404040;
+  --tooltip-text: #e8e8e8;
+}
+
+[data-theme="dark"] .detailed-tooltip {
+  background: var(--tooltip-background);
+  border-color: var(--tooltip-border);
+  color: var(--tooltip-text);
+}
+
+[data-theme="dark"] .context-menu {
+  background: var(--tooltip-background);
+  border-color: var(--tooltip-border);
+}
+
+[data-theme="dark"] .menu-item {
+  color: var(--tooltip-text);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,17 @@
+:root {
+  --chart-background-color: #ffffff;
+  --chart-text-color: #051441;
+  --chart-border-color: #ebedf1;
+  --chart-grid-color: #f5f5f5;
+  --chart-crosshair-color: #888888;
+  --primary-color: #1677ff;
+  --primary-hover-color: rgba(22, 119, 255, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --chart-background-color: #151517;
+  --chart-text-color: #f8f8f8;
+  --chart-border-color: #292929;
+  --chart-grid-color: #333333;
+  --chart-crosshair-color: #888888;
+}

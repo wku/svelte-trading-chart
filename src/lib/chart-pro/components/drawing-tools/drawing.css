@@ -1,0 +1,203 @@
+.drawing-tools {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background-color: var(--chart-background-color, #ffffff);
+  border-bottom: 1px solid var(--chart-border-color, #ebedf1);
+  min-height: 40px;
+}
+
+.tool-groups {
+  display: flex;
+  gap: 4px;
+}
+
+.group-btn {
+  padding: 4px 8px;
+  border: 1px solid var(--chart-border-color, #ebedf1);
+  border-radius: 4px;
+  background-color: var(--chart-background-color, #ffffff);
+  color: var(--chart-text-color, #051441);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.group-btn:hover {
+  background-color: rgba(22, 119, 255, 0.1);
+}
+
+.group-btn.active {
+  background-color: #1677ff;
+  color: #ffffff;
+  border-color: #1677ff;
+}
+
+.tool-selector {
+  position: relative;
+  min-width: 150px;
+}
+
+.tool-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid var(--chart-border-color, #ebedf1);
+  border-radius: 4px;
+  background-color: var(--chart-background-color, #ffffff);
+  color: var(--chart-text-color, #051441);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tool-button:hover {
+  background-color: rgba(22, 119, 255, 0.1);
+}
+
+.tool-button.active {
+  border-color: #1677ff;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.tool-button.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.tool-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--chart-background-color, #ffffff);
+  border: 1px solid var(--chart-border-color, #ebedf1);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.tool-item {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  color: var(--chart-text-color, #051441);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid var(--chart-border-color, #ebedf1);
+}
+
+.tool-item:hover {
+  background-color: rgba(22, 119, 255, 0.1);
+}
+
+.tool-item:last-child {
+  border-bottom: none;
+}
+
+.tool-item.active {
+  background-color: #1677ff;
+  color: #ffffff;
+}
+
+.tool-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--chart-border-color, #ebedf1);
+  border-radius: 4px;
+  background-color: var(--chart-background-color, #ffffff);
+  color: var(--chart-text-color, #051441);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.control-btn:hover {
+  background-color: rgba(22, 119, 255, 0.1);
+}
+
+.control-btn.active {
+  background-color: #1677ff;
+  color: #ffffff;
+  border-color: #1677ff;
+}
+
+.control-btn.remove {
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.control-btn.remove:hover {
+  background-color: rgba(255, 77, 79, 0.1);
+}
+
+.control-btn.clear {
+  border-color: #ff7875;
+  color: #ff7875;
+}
+
+.control-btn.clear:hover {
+  background-color: rgba(255, 120, 117, 0.1);
+}
+
+.overlay-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.overlay-count {
+  font-size: 12px;
+  color: #76808f;
+  padding: 4px 8px;
+  background-color: rgba(22, 119, 255, 0.1);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .drawing-tools {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .tool-groups {
+    order: 1;
+    width: 100%;
+  }
+
+  .tool-selector {
+    order: 2;
+    min-width: 120px;
+  }
+
+  .tool-controls {
+    order: 3;
+  }
+
+  .overlay-list {
+    order: 4;
+    margin-left: 0;
+  }
+
+  .group-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
