@@ -16,7 +16,7 @@ A demonstration project showcasing a professional trading chart implementation u
 - ✅ **Responsive Design**: Works seamlessly on desktop and mobile devices
 
 ## 🖼 Chart Preview
-![chart.png](src/assets/chart.png)
+![chart.png](assets/chart.png)
 
 ## 🛠 Quick Start
 
