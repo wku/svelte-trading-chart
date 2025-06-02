@@ -44,3 +44,5 @@ gas-report.txt
 node_modules
 config/deployed-config.json
 
+.idea
+
