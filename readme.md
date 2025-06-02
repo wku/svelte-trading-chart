@@ -25,8 +25,8 @@ A demonstration project showcasing a professional trading chart implementation u
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/chartpro-demo.git
-cd chartpro-demo
+git clone https://github.com/wku/svelte-trading-chart.git
+cd svelte-trading-chart
 ```
 
 2. Install dependencies:
